@@ -6,7 +6,7 @@ datatable(
     escape = FALSE,
     extensions = c('ColReorder', 'FixedHeader', 'Responsive'),
     options = list(
-        language = list(url = 'https://raw.githubusercontent.com/subreddit-emportugues/lista/master/lang.json'),
+        language = list(url = 'https://raw.githubusercontent.com/subreddit-emportugues/lista/master/res/lang/pt_BR.json'),
         pageLength = 25,
         searchHighlight = TRUE,
         autoWidth = TRUE,
