@@ -1,19 +1,3 @@
----
-title: "r/EmPortugues"
-output:
-  html_document:
-    theme: united
-    highlight: tango
----
-
-```{r, echo=FALSE, results='asis'}
-library(reticulate)
-library(DT)
-```
-
-```{r, echo=FALSE, results='asis'}
-source_python('crawler.py')
-
 datatable(
     get_data(),
     rownames = FALSE,
@@ -41,8 +25,3 @@ datatable(
         )
     )
 )
-```
-
-```{r, echo=FALSE, results='asis'}
-cat('<div style="text-align: center; font-size: 80%; color: #999999"><i>Última Atualização: ', get_todays_date(), '</i></div><br><br>')
-```

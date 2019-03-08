@@ -12,7 +12,7 @@ def get_data():
     subreddit_list = []
     subreddits = []
 
-    with open('subreddits.txt', 'r') as file:
+    with open('../res/data/subreddits_mini.txt', 'r') as file:
         for line in file:
             subreddit_list.append(line.rstrip())
 
@@ -41,8 +41,7 @@ def convert_unix_timestamp(unixTimestamp):
     return datetime.utcfromtimestamp(unixTimestamp).strftime('%d/%m/%Y')
 
 
-
-def get_todays_date():
+def get_date():
     return datetime.today().strftime('%d/%m/%Y')
 
 

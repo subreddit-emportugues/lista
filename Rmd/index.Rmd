@@ -1,0 +1,15 @@
+---
+title: "r/EmPortugues"
+output:
+  html_document:
+    theme: united
+    highlight: tango
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs") })
+---
+```{r, code = readLines("../R/init.R"), echo = FALSE}
+```
+```{r, code = readLines("../R/table.R"), echo = FALSE}
+```
+```{r, code = readLines("../R/footer.R", encoding = "UTF-8"), echo = FALSE, results='asis'}
+```
