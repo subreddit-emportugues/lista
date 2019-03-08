@@ -1,0 +1,48 @@
+---
+title: "r/EmPortugues"
+output:
+  html_document:
+    theme: united
+    highlight: tango
+---
+
+```{r, echo=FALSE, results='asis'}
+library(reticulate)
+library(DT)
+```
+
+```{r, echo=FALSE, results='asis'}
+source_python('crawler.py')
+
+datatable(
+    get_data(),
+    rownames = FALSE,
+    class = 'cell-border stripe hover',
+    style = 'bootstrap',
+    escape = FALSE,
+    extensions = c('ColReorder', 'FixedHeader', 'Responsive'),
+    options = list(
+        language = list(url = 'http://cdn.datatables.net/plug-ins/1.10.11/i18n/Portuguese-Brasil.json'),
+        pageLength = 5,
+        searchHighlight = TRUE,
+        autoWidth = TRUE,
+        searchDelay = 300,
+        lengthMenu = c(5, 25, 100, 500, 1000),
+        colReorder = TRUE,
+        fixedHeader = TRUE,
+        order = list(
+            list(2, 'desc')
+        ),
+        columnDefs = list(
+            list(
+                width = '150px',
+                targets = c(0)
+            )
+        )
+    )
+)
+```
+
+```{r, echo=FALSE, results='asis'}
+cat('<div style="text-align: center; font-size: 80%; color: #999999"><i>Última Atualização: ', get_todays_date(), '</i></div><br><br>')
+```
