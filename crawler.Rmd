@@ -22,7 +22,7 @@ datatable(
     escape = FALSE,
     extensions = c('ColReorder', 'FixedHeader', 'Responsive'),
     options = list(
-        language = list(url = 'http://cdn.datatables.net/plug-ins/1.10.11/i18n/Portuguese-Brasil.json'),
+        language = list(url = 'https://raw.githubusercontent.com/subreddit-emportugues/lista/master/lang.json'),
         pageLength = 5,
         searchHighlight = TRUE,
         autoWidth = TRUE,
