@@ -12,7 +12,7 @@ def get_data():
     subreddit_list = []
     subreddits = []
 
-    with open('subreddits_mini.txt', 'r') as file:
+    with open('subreddits.txt', 'r') as file:
         for line in file:
             subreddit_list.append(line.rstrip())
 

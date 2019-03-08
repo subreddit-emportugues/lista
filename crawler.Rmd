@@ -23,7 +23,7 @@ datatable(
     extensions = c('ColReorder', 'FixedHeader', 'Responsive'),
     options = list(
         language = list(url = 'https://raw.githubusercontent.com/subreddit-emportugues/lista/master/lang.json'),
-        pageLength = 5,
+        pageLength = 25,
         searchHighlight = TRUE,
         autoWidth = TRUE,
         searchDelay = 300,
