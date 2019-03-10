@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>r/EmPortugues</title>
+
+<script src="index_files/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="index_files/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
+<script src="index_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="index_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="index_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="index_files/navigation-1.1/tabsets.js"></script>
+<script src="index_files/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="index_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="index_files/datatables-binding-0.5/datatables.js"></script>
+<link href="index_files/dt-core-bootstrap-1.10.16/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="index_files/dt-core-bootstrap-1.10.16/css/dataTables.bootstrap.extra.css" rel="stylesheet" />
+<script src="index_files/dt-core-bootstrap-1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="index_files/dt-core-bootstrap-1.10.16/js/dataTables.bootstrap.min.js"></script>
+<link href="index_files/dt-ext-colreorder-bootstrap-1.10.16/css/colReorder.bootstrap.min.css" rel="stylesheet" />
+<script src="index_files/dt-ext-colreorder-bootstrap-1.10.16/js/dataTables.colReorder.min.js"></script>
+<link href="index_files/dt-ext-fixedheader-bootstrap-1.10.16/css/fixedHeader.bootstrap.min.css" rel="stylesheet" />
+<script src="index_files/dt-ext-fixedheader-bootstrap-1.10.16/js/dataTables.fixedHeader.min.js"></script>
+<link href="index_files/dt-ext-responsive-bootstrap-1.10.16/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<script src="index_files/dt-ext-responsive-bootstrap-1.10.16/js/dataTables.responsive.min.js"></script>
+<script src="index_files/dt-ext-responsive-bootstrap-1.10.16/js/responsive.bootstrap.min.js"></script>
+<link href="index_files/dt-plugin-searchhighlight-1.10.16/dataTables.searchHighlight.css" rel="stylesheet" />
+<script src="index_files/dt-plugin-searchhighlight-1.10.16/dataTables.searchHighlight.min.js"></script>
+<script src="index_files/dt-plugin-searchhighlight-1.10.16/jquery.highlight.js"></script>
+<link href="index_files/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="index_files/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="assets\css\style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">r/EmPortugues</h1>
+
+</div>
+
+
+<h1>
+r/EmPortugues
+</h1>
+<div id="htmlwidget-35f003577ce9cdf61569" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-35f003577ce9cdf61569">{"x":{"style":"bootstrap","filter":"none","extensions":["ColReorder","FixedHeader","Responsive"],"data":[["<img src=\"https://styles.redditmedia.com/t5_wal6n/styles/communityIcon_dilgltq68sf21.jpg\" width=\"20px\" height=\"20px\" style=\"border-radius: 50%;\">&nbsp;&nbsp;<a class=\"link-style-3\" target=\"_blank\" href=\"https://www.reddit.com/r/091Para\">r/091Para<\/a>","<img src=\"assets/img/subreddit.png\" width=\"20px\" height=\"20px\" style=\"border-radius: 50%;\">&nbsp;&nbsp;<a class=\"link-style-3\" target=\"_blank\" href=\"https://www.reddit.com/r/a7arte\">r/a7arte<\/a>","<img src=\"assets/img/subreddit.png\" width=\"20px\" height=\"20px\" style=\"border-radius: 50%;\">&nbsp;&nbsp;<a class=\"link-style-3\" target=\"_blank\" href=\"https://www.reddit.com/r/AdrianaLima\">r/AdrianaLima<\/a>","<img src=\"assets/img/subreddit.png\" width=\"20px\" height=\"20px\" style=\"border-radius: 50%;\">&nbsp;&nbsp;<a class=\"link-style-3\" target=\"_blank\" href=\"https://www.reddit.com/r/AJS_BR\">r/AJS_BR<\/a>","<img src=\"assets/img/subreddit.png\" width=\"20px\" height=\"20px\" style=\"border-radius: 50%;\">&nbsp;&nbsp;<a class=\"link-style-3\" target=\"_blank\" href=\"https://www.reddit.com/r/Ajuda\">r/Ajuda<\/a>","<img src=\"assets/img/subreddit.png\" width=\"20px\" height=\"20px\" style=\"border-radius: 50%;\">&nbsp;&nbsp;<a class=\"link-style-3\" target=\"_blank\" href=\"https://www.reddit.com/r/AjudaBrasil\">r/AjudaBrasil<\/a>","<img src=\"assets/img/subreddit.png\" width=\"20px\" height=\"20px\" style=\"border-radius: 50%;\">&nbsp;&nbsp;<a class=\"link-style-3\" target=\"_blank\" href=\"https://www.reddit.com/r/AlessandraAmbrosio\">r/AlessandraAmbrosio<\/a>","<img src=\"assets/img/subreddit.png\" width=\"20px\" height=\"20px\" style=\"border-radius: 50%;\">&nbsp;&nbsp;<a class=\"link-style-3\" target=\"_blank\" href=\"https://www.reddit.com/r/Algarve\">r/Algarve<\/a>","<img src=\"https://styles.redditmedia.com/t5_tlsxl/styles/communityIcon_hv8wybagc3721.png\" width=\"20px\" height=\"20px\" style=\"border-radius: 50%;\">&nbsp;&nbsp;<a class=\"link-style-3\" target=\"_blank\" href=\"https://www.reddit.com/r/AllTuga\">r/AllTuga<\/a>","<img src=\"assets/img/subreddit.png\" width=\"20px\" height=\"20px\" style=\"border-radius: 50%;\">&nbsp;&nbsp;<a class=\"link-style-3\" target=\"_blank\" href=\"https://www.reddit.com/r/AnaBeatrizBarros\">r/AnaBeatrizBarros<\/a>"],["<div style=\"width: 400px; word-wrap: break-word;\">Comunidade de Belém do Pará. Venha para a melhor sub do Reddit do melhor Estado da Região Norte do País.<\/div>","<div style=\"width: 400px; word-wrap: break-word;\">Cinema e TV, filmes e séries, notícias e avaliações a filmes!<\/div>","<div style=\"width: 400px; word-wrap: break-word;\">Dedicated to Adriana Lima, the most beautiful woman in the world.<\/div>","<div style=\"width: 400px; word-wrap: break-word;\">O objetivo deste subreddit é debater de maneira saudável, respeitando os indivíduos e a liberdade de expressão e pensamento, os problemas advindos dos movimentos caracterizados como Justiceiros Sociais.\n\nEsse Subreddit foi criado e é administrado pelos fundadores e moderadores da página Aventuras na Justiça Social.\n\nVisite: [justica.social](http://aventurasnajusticasocial.com/)<\/div>","<div style=\"width: 400px; word-wrap: break-word;\">Obtenha ajuda em português,  com assuntos relacionados a reddit.com<\/div>","<div style=\"width: 400px; word-wrap: break-word;\">AjudaBrasil,  é um subreddit onde você vai tirar suas dúvidas relacionadas ao reddit.com! \n\nLeiam as regras antes de posta /r/AjudaBrasil/about/rules/\n\nSe inscreva-se para ficar por dentro! \n<\/div>"," <div align=\"center\">- - -<\/div>","<div style=\"width: 400px; word-wrap: break-word;\">A subreddit for anything and everything relating to the Algarve, a region in beautiful southern Portugal. Em Português and in English.<\/div>","<div style=\"width: 400px; word-wrap: break-word;\">Jull chill no subreddit de tugas, faz o que quiseres aqui é anarquia ahhaha welcome<\/div>","<div style=\"width: 400px; word-wrap: break-word;\">Ana Beatriz Barros<\/div>"],["16","761","5.932","275","5","158","5.567","381","33","447"],["10/02/2019","29/11/2015","01/04/2011","28/07/2016","13/10/2016","04/10/2016","11/05/2012","07/07/2009","28/12/2018","25/10/2012"],["Não","Não","Não","Não","Não","Não","Não","Não","Não","Não"]],"container":"<table class=\"table table-bordered table-striped table-hover\">\n  <thead>\n    <tr>\n      <th>Subreddit<\/th>\n      <th>Descrição<\/th>\n      <th>Inscrições<\/th>\n      <th>Criação<\/th>\n      <th>NSFW<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"language":{"url":"https://raw.githubusercontent.com/subreddit-emportugues/lista/master/res/lang/pt_BR.json","searchPlaceholder":"Pesquisar"},"pageLength":100,"searchHighlight":true,"autoWidth":true,"searchDelay":300,"lengthMenu":[5,25,100,500,1000],"colReorder":true,"fixedHeader":true,"order":[[2,"desc"]],"columnDefs":[{"width":"160px","targets":0},{"width":"350px","targets":1},{"render":"function(data, type) {\nif (type != 'display') {\nreturn parseInt(data.replace('.', ''))\n}\nreturn data\n}","targets":2},{"render":"function(data, type) {\nif (type != 'display') {\nreturn new Date(data.split('/').reverse().join('-')).getTime() / 1000\n}\nreturn data\n}","targets":3}],"orderClasses":false,"responsive":true}},"evals":["options.columnDefs.2.render","options.columnDefs.3.render"],"jsHooks":[]}</script>
+<div class="table-footer">
+<p><i>Última atualização: 10/03/2019</i></p>
+</div>
+<div class="external">
+<p><a href="https://www.reddit.com/r/EmPortugues/" target="_blank"><img src="assets/img/reddit.png"></a><a href="https://github.com/subreddit-emportugues/lista" target="_blank"><img src="assets/img/github.png"></a></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

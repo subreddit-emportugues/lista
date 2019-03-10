@@ -14,7 +14,7 @@ def get_data():
     subreddit_list = []
     subreddits = []
 
-    with open('../res/data/subreddits_mini.txt', 'r') as file:
+    with open('res/data/subreddits_mini.txt', 'r') as file:
         for line in file:
             subreddit_list.append(line.rstrip())
 
@@ -55,10 +55,10 @@ def get_date():
 
 def format_icon_name(icon, name, nsfw):
     if nsfw:
-        return '<img src="../docs/assets/img/subreddit-nsfw.png" width="20px" height="20px" style="border-radius: 50%;">&nbsp;&nbsp;<a class="link-style-3" target="_blank" href="https://www.reddit.com/{0}">{0}</a>'.format(name)
+        return '<img src="assets/img/subreddit-nsfw.png" width="20px" height="20px" style="border-radius: 50%;">&nbsp;&nbsp;<a class="link-style-3" target="_blank" href="https://www.reddit.com/{0}">{0}</a>'.format(name)
     else:
         if not icon:
-            return '<img src="../docs/assets/img/subreddit.png" width="20px" height="20px" style="border-radius: 50%;">&nbsp;&nbsp;<a class="link-style-3" target="_blank" href="https://www.reddit.com/{0}">{0}</a>'.format(name)
+            return '<img src="assets/img/subreddit.png" width="20px" height="20px" style="border-radius: 50%;">&nbsp;&nbsp;<a class="link-style-3" target="_blank" href="https://www.reddit.com/{0}">{0}</a>'.format(name)
         else:
             return '<img src="{0}" width="20px" height="20px" style="border-radius: 50%;">&nbsp;&nbsp;<a class="link-style-3" target="_blank" href="https://www.reddit.com/{1}">{1}</a>'.format(icon, name)
 

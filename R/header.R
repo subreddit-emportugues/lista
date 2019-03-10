@@ -1,2 +1,2 @@
-header = load_html("../docs/header.html")
+header = load_html("views/header.html")
 cat(header)

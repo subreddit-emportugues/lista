@@ -1,0 +1,19 @@
+---
+title: "r/EmPortugues"
+output:
+  html_document:
+    css: "assets/css/style.css"
+    self_contained: no
+    theme: lumen
+    highlight: tango
+    includes:
+      in_header: "views/head.html"
+---
+```{r, code = readLines("R/init.R"), echo = FALSE}
+```
+```{r, code = readLines("R/header.R", encoding = "UTF-8"), echo = FALSE, results='asis'}
+```
+```{r, code = readLines("R/table.R"), echo = FALSE}
+```
+```{r, code = readLines("R/footer.R", encoding = "UTF-8"), echo = FALSE, results='asis'}
+```
