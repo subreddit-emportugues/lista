@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Khand');
+
+body {
+    background-color: rgb(242, 246, 248);
+}
+
+h1 {
+    font-family: Khand;
+    margin: 10px;
+    user-select: none;
+}
+
+.external {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.title {
+    display: none;
+}
+
+.external a {
+    text-decoration: none;
+}
+
+.external img {
+    opacity: 0.6;
+    padding-left: 5px;
+    user-select: none;
+}
+
+.table-footer {
+    text-align: center;
+    font-size: 95%;
+    color: #999999;
+    user-select: none;
+}
+
+.row {
+    background-color: #fff;
+}
+
+.row:nth-of-type(1) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+} 
+.row:nth-of-type(3) {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+} 
+
+.col-sm-6 {
+    margin-top: 10px;
+}
+
+.link-style-3 {
+    background: linear-gradient(to bottom, #158cba 0, #158cba 100%) 0 1.3em / 0 0 repeat-x;
+    color: #158cba;
+    margin: -1px;
+    margin-bottom: -2px !important;
+    padding: 0 5px 2px 3px;
+    text-decoration: none !important;
+    font-weight: bold;
+    transition: all .2s ease-in-out; }
+
+.link-style-3:hover {
+    background-image: linear-gradient(to bottom, #158cba 0, #158cba 100%);
+    background-position: 0 100%; 
+    background-size: 2px 100%;
+    color: #fff; 
+    transition: all .2s ease-in-out !important; }
