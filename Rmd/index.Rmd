@@ -2,7 +2,7 @@
 title: "r/EmPortugues"
 output:
   html_document:
-    css: "../assets/css/style.css"
+    css: "../docs/assets/css/style.css"
     self_contained: no
     theme: lumen
     highlight: tango
