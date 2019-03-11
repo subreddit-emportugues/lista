@@ -10,6 +10,14 @@ h1 {
     user-select: none;
 }
 
+.dataTables_filter input {
+    width: 200px !important;
+}
+
+.dataTables_length select {
+    width: 70px !important;
+}
+
 .external {
     display: flex;
     justify-content: center;

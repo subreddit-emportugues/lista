@@ -17,12 +17,13 @@ datatable(
         lengthMenu = c(5, 25, 100, 500, 1000),
         colReorder = TRUE,
         fixedHeader = TRUE,
+        processing = TRUE,
         order = list(
             list(2, 'desc')
         ),
         columnDefs = list(
             list(
-                width = '160px',
+                width = '170px',
                 targets = c(0)
             ),
             list(

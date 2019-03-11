@@ -1,6 +1,8 @@
 from time import sleep
 from datetime import datetime
+import markdown
 import requests
+import asyncio
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 import pandas
@@ -9,40 +11,46 @@ import locale
 
 locale.setlocale(locale.LC_ALL, 'pt_BR')
 
+subreddits = []
+
 
 def get_data():
+    global subreddits
     subreddit_list = []
-    subreddits = []
 
     with open('res/data/subreddits_mini.txt', 'r') as file:
         for line in file:
             subreddit_list.append(line.rstrip())
 
-    for subreddit in subreddit_list:
-
-        session = requests.Session()
-        retry = Retry(connect=3, backoff_factor=0.5)
-        adapter = HTTPAdapter(max_retries=retry)
-        session.mount('http://', adapter)
-        session.mount('https://', adapter)
-        
-        response = session.get('https://www.reddit.com/{}/about.json'.format(subreddit), headers={'User-agent': 'ept-crawler'})
-        json_obj = response.json()
-        data = json_obj['data']
-
-        subreddit = []
-
-        subreddit.append(format_icon_name(data['community_icon'], data['display_name_prefixed'], data['over18']))
-        subreddit.append(format_description(data['public_description']))
-        subreddit.append(format_subscribers(data['subscribers']))
-        subreddit.append(format_age(data['created']))
-        subreddit.append(format_nsfw(data['over18']))
-
-        subreddits.append(subreddit)
-
+    for subreddit_name in subreddit_list:
+        visit(subreddit_name)
         sleep(1)
 
     return pandas.DataFrame(subreddits, columns=['Subreddit', 'Descrição','Inscrições', 'Criação', 'NSFW'])
+
+
+def visit(subreddit_name):
+    global subreddits
+
+    session = requests.Session()
+    retry = Retry(connect=3, backoff_factor=0.5)
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount('http://', adapter)
+    session.mount('https://', adapter)
+    
+    response = session.get('https://www.reddit.com/{}/about.json'.format(subreddit_name), headers={'User-agent': 'ept-crawler'})
+    json_obj = response.json()
+    data = json_obj['data']
+
+    subreddit = []
+
+    subreddit.append(format_icon_name(data['community_icon'], data['display_name_prefixed'], data['over18']))
+    subreddit.append(format_description(data['public_description']))
+    subreddit.append(format_subscribers(data['subscribers']))
+    subreddit.append(format_age(data['created']))
+    subreddit.append(format_nsfw(data['over18']))
+
+    subreddits.append(subreddit)
 
 
 def convert_unix_timestamp(unixTimestamp):
@@ -65,7 +73,7 @@ def format_icon_name(icon, name, nsfw):
 
 def format_description(description):
     if description:
-        return '<div style="width: 400px; word-wrap: break-word;">{}</div>'.format(description)
+        return '<div style="width: 400px; word-wrap: break-word;">{}</div>'.format(markdown.markdown(description))
     else:
         return ' <div align="center">- - -</div>'
 
